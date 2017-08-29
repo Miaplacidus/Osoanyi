@@ -42,47 +42,42 @@ export default class Form extends Component {
       <div>
         <div>Add a run</div>
         <form>
-          <label htmlFor="time">Time</label>
+          <fieldset>
+            <label htmlFor="time">Time</label>
+            <input
+              type="text"
+              id="time"
+              name="time"
+              value={this.state.time}
+              onChange={this.handleTimeChange}
+            />
+          </fieldset>
+          <fieldset>
+            <label htmlFor="level">Level (enter minutes per mile)</label>
+            <input
+              type="number"
+              id="level"
+              name="level"
+              value={this.state.level}
+              onChange={this.handleLevelChange}
+            />
+          </fieldset>
+          <fieldset>
+            <label htmlFor="duration">Duration (enter minutes per mile)</label>
+            <input
+              type="number"
+              id="duration"
+              name="duration"
+              value={this.state.duration}
+              onChange={this.handleDurationChange}
+            />
+          </fieldset>
           <input
-            type="text"
-            id="time"
-            name="time"
-            value={this.state.time}
-            onChange={this.handleTimeChange}
+            type="button"
+            onClick={this.handleSubmit}
+            value="Add That Run!?"
           />
-          <label htmlFor="level">Level (enter minutes per mile)</label>
-          <input
-            type="number"
-            id="level"
-            name="level"
-            value={this.state.level}
-            onChange={this.handleLevelChange}
-          />
-          <label htmlFor="duration">Duration (enter minutes per mile)</label>
-          <input
-            type="number"
-            id="duration"
-            name="duration"
-            value={this.state.duration}
-            onChange={this.handleDurationChange}
-          />
-          <input type="button" onClick={this.handleSubmit} />
         </form>
-        <div>
-          {this.state.time}
-        </div>
-
-        <div>
-          {this.state.level}
-        </div>
-
-        <div>
-          {this.state.duration}
-        </div>
-
-        <div>
-          {this.state.duration / this.state.level} miles
-        </div>
       </div>
     );
   }

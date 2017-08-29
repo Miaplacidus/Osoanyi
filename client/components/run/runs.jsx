@@ -4,15 +4,24 @@ import { render } from 'react-dom';
 export default class Runs extends Component {
   render() {
     const runs = this.props.runs.map((run, i) =>
-      <li key={i}>
-        {run.time}
-      </li>
+      <dl key={i}>
+        <dt>Time</dt>
+        <dd>
+          {run.time}
+        </dd>
+        <dt>Duration</dt>
+        <dd>
+          {run.duration}
+        </dd>
+        <dt>Level</dt>
+        <dd>
+          {run.level}
+        </dd>
+      </dl>
     );
     return (
       <div>
-        <ul>
-          {runs}
-        </ul>
+        {runs}
       </div>
     );
   }

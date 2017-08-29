@@ -19,6 +19,7 @@ export default class Osoanyi extends Component {
   render(state) {
     return (
       <div>
+        <h1>Osoanyi</h1>
         <Form onRunAdd={this.handleRunAdd} />
         <div>
           <Runs runs={this.state.runs} />
