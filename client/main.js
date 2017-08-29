@@ -1,5 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Run from './components/run/index.jsx';
+import Osoanyi from './components/run/index.jsx';
 
-render(<Run />, document.getElementById('root'));
+render(<Osoanyi />, document.getElementById('root'));
