@@ -12,10 +12,12 @@ export default class Osoanyi extends Component {
 
     this.handleRunAdd = this.handleRunAdd.bind(this);
   }
+
   handleRunAdd(run) {
     this.state.runs.push(run);
     this.setState({ runs: this.state.runs });
   }
+  
   render(state) {
     return (
       <div>

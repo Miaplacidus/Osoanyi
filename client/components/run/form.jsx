@@ -40,7 +40,7 @@ export default class Form extends Component {
   render(state) {
     return (
       <div>
-        <div>Add a run</div>
+        <div>What's your ideal run?</div>
         <form>
           <fieldset>
             <label htmlFor="time">Time</label>
